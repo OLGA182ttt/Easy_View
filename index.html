@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyView</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Video de fondo -->
+    <div class="video-background">
+        <video muted autoplay loop>
+            <source src="fondo3.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="capa"></div>
+    
+    <form id="loginForm">
+        <h1>EasyView</h1>
+        <h2>Login</h2>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <div class="remember">
+            <p>Remember me</p>
+            <p>Forgot password</p>
+        </div>
+     
+        <input type="submit" class="btn-1" value="Iniciar">
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevenir la acción por defecto del formulario
+
+            // Datos del usuario
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Definir los datos correctos para el usuario
+            const correctUsername = "usuario123";
+            const correctPassword = "contraseña123";
+
+            // Verificar si el usuario y la contraseña son correctos
+            if (username === correctUsername && password === correctPassword) {
+                // Redirigir a una página web externa
+                window.location.href = "https://olga182ttt.github.io/examen_vista/"; // Aquí puedes poner la URL de la página web a la que deseas redirigir
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+    </script>
+    
+</body>
+</html>

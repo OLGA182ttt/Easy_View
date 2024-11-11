@@ -1,0 +1,118 @@
+/* Estilo del video de fondo */
+.video-background {
+    position: fixed; /* Mantiene el video fijo en su lugar */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el video ocupe el 100% del ancho */
+    height: 100%; /* Asegura que el video ocupe el 100% del alto */
+    overflow: hidden;
+    z-index: -1; /* Asegura que el video quede en el fondo */
+}
+
+.video-background video {
+    position: absolute; /* Esto permite que el video se posicione en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el video cubra el ancho completo */
+    height: 100%; /* Asegura que el video cubra el alto completo */
+    object-fit: cover; /* Hace que el video cubra completamente sin distorsionarse */
+}
+
+/* Capa de opacidad sobre el video */
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+    z-index: 0; /* Coloca la capa sobre el video */
+}
+
+/* Estilos del formulario */
+form {
+    position: relative;
+    z-index: 1;
+    width: 400px; /* Ancho del formulario */
+    margin: 150px auto; /* Centrado en pantalla */
+    padding: 40px; /* Espaciado interno */
+    background-color: rgba(51, 51, 51, 0.8); /* Gris oscuro con opacidad (transparente) */
+    border-radius: 8px;
+    text-align: center;
+    color: white; /* Letras blancas */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+}
+
+/* Estilos de los encabezados */
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+    color: #FF7F32; /* Color naranja brillante para el título */
+    font-size: 3em; /* Aumentamos el tamaño del título */
+    font-weight: 700; /* Negrita para el título */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre las letras */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    text-shadow: 3px 3px 5px black, 0 0 25px orange, 0 0 5px darkorange; /* Contorno negro con resplandor naranja */
+}
+
+/* Estilo específico para el subtítulo */
+h2 {
+    color: #fff; /* Mantener color blanco para subtítulo */
+    font-size: 1.5em; /* Tamaño de fuente más pequeño para el subtítulo */
+    font-weight: 400; /* Peso normal para el subtítulo */
+    text-transform: none; /* Evitar mayúsculas en el subtítulo */
+    letter-spacing: normal; /* Espaciado normal para el subtítulo */
+    text-shadow: 2px 2px 4px black; /* Sombra negra para el subtítulo */
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 18px 12px; /* Aumenta el padding para mejorar la legibilidad */
+    margin-bottom: 25px;
+    outline: none;
+    border-radius: 25px;
+    background-color: white; /* Fondo blanco para los cuadros de texto */
+    border: 2px solid #FF7F32; /* Borde naranja más fuerte */
+    box-shadow: 0 0 0 3px black; /* Borde negro alrededor del borde naranja */
+    color: #333; /* Color del texto en los cuadros */
+    font-size: 1.1em; /* Tamaño de letra más grande para los campos */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+}
+
+/* Placeholder dentro de los cuadros de texto */
+input::placeholder {
+    color: #aaa; /* Color gris claro para el texto placeholder */
+    font-style: italic; /* Hacerlo en cursiva para diferenciarlo */
+}
+
+/* Estilo para la sección de recordar y olvidar contraseña */
+.remember {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em; /* Tamaño más pequeño pero legible */
+    color: #bbb; /* Color más claro para texto */
+}
+
+/* Estilo del botón de "Iniciar" */
+.btn-1 {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #25252b; /* Fondo negro */
+    color: white; /* Letras blancas */
+    border: 2px solid #FF7F32; /* Borde naranja más fuerte */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em; /* Tamaño de letra más grande */
+    font-weight: 500; /* Peso de la fuente del botón */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+}
+
+/* Efecto hover del botón */
+.btn-1:hover {
+    background: linear-gradient(45deg, #25252b, #FF7F32); /* Degradado de fondo de negro a naranja */
+    border: 2px solid #FF7F32; /* Mantiene el borde naranja */
+}
+
